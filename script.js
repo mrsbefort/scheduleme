@@ -37,11 +37,12 @@ function setUpTimeBlocks(){
     $timeBlocks.each(function(){
       var $thisBlock = $(this);
       var thisBlockHr = parseInt($thisBlock.attr("data-hour"));
-
+      console.log(thisBlockHr); 
       //add style to time blocks to show where we are in the day
       if (thisBlockHr == currentHour) {
         $thisBlock.addClass("present").removeClass("past future");
       }
+      console.log(currentHour);
       if (thisBlockHr < currentHour) {
         $thisBlock.addClass("past").removeClass("present future");
       }
@@ -73,6 +74,7 @@ function saveHandler(){
 
   var hourToUpdate = $(this).parent().attr("data-hour");
   var itemToAdd = (($(this).parent()).children("textarea")).val();
+console.log($(this))
 
   //see which item we need to update based on the hour of the button clicked matching
   for (var j = 0; j < toDoItems.length; j++){

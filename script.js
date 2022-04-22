@@ -6,7 +6,7 @@ var toDoItems = [];
 //each object has a hour property and a text property
  
 var currentDate = moment().format("dddd, MMMM Do");
-var currentHour = moment().format("H");
+var currentHour = 8;
 
 //if we don't have any todos set up, let's set up the array of objects
 function initializeSchedule(){
